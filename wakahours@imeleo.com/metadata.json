@@ -1,0 +1,8 @@
+{
+  "name": "WakaHours",
+  "description": "Show WakaHours time on the panel",
+  "uuid": "wakahours@imeleo.com",
+  "shell-version": [
+    "42"
+  ]
+}

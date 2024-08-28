@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkAdjustment" id="num-adj">
+    <property name="upper">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="num-adj2">
+    <property name="upper">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkGrid" id="content-table">
+    <property name="can_focus">0</property>
+    <property name="row_homogeneous">1</property>
+    <property name="column_homogeneous">1</property>
+    <child>
+      <object class="GtkLabel" id="position-l">
+        <property name="can_focus">0</property>
+        <property name="label" translatable="yes">Panel position</property>
+        <property name="justify">fill</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel" id="num-l">
+        <property name="can_focus">0</property>
+        <property name="label" translatable="yes">Number of clocks</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="GtkGrid" id="positions-bb">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <child>
+          <object class="GtkToggleButton" id="position-LR">
+            <property name="label" translatable="yes">◂</property>
+            <property name="receives_default">1</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lp1">
+            <property name="can_focus">0</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="position-ML">
+            <property name="label" translatable="yes">◃</property>
+            <property name="receives_default">1</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="position-M1">
+            <property name="label" translatable="yes">▮</property>
+            <property name="receives_default">1</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="position-MR">
+            <property name="label" translatable="yes">▹</property>
+            <property name="receives_default">1</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lp2">
+            <property name="can_focus">0</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="position-RL">
+            <property name="label" translatable="yes">▸</property>
+            <property name="receives_default">1</property>
+          </object>
+        </child>
+        <layout>
+          <property name="column">1</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel" id="hide-local-l">
+        <property name="can_focus">0</property>
+        <property name="label" translatable="yes">Hide local time</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSwitch" id="local-cb">
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox" id="nums-b">
+        <property name="can_focus">0</property>
+        <property name="homogeneous">1</property>
+        <child>
+          <object class="GtkSpinButton" id="num-sp">
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="adjustment">num-adj</property>
+            <property name="numeric">1</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="num-sp2">
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="adjustment">num-adj2</property>
+            <property name="numeric">1</property>
+          </object>
+        </child>
+        <layout>
+          <property name="column">1</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel" id="show-city-l">
+        <property name="can_focus">0</property>
+        <property name="label" translatable="yes">Location instead of time zone in panel</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSwitch" id="show-city-cb">
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="GtkButton" id="open-gnome-clocks">
+        <property name="label">Edit World Clocks in "Clocks"...</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="row">5</property>
+          <property name="column-span">2</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema id="org.gnome.shell.extensions.sermon" path="/org/gnome/shell/extensions/sermon/">
+        <key name="max-items-per-section" type="i">
+            <default>5</default>
+            <summary>Maximum items per section</summary>
+            <description>The maximum number of items shown in the menu sections. This applies to both Systemd services and Docker containers.</description>
+        </key>
+        <key name="systemd-section-enabled" type="b">
+            <default>true</default>
+            <summary>Show Systemd services</summary>
+            <description>Show Systemd section in the menu.</description>
+        </key>
+        <key name="systemd-section-filter-loaded-services" type="b">
+            <default>true</default>
+            <summary>Show only services that Systemd has attempted to load</summary>
+            <description>Show only services that Systemd has attempted to load (if false show all services, including the ones that Systemd has not attempted to load)</description>
+        </key>
+        <key name="systemd-section-filter-user-services" type="b">
+            <default>false</default>
+            <summary>Show only user services</summary>
+            <description>Show only user services (if false show all system ones)</description>
+        </key>
+        <key name="systemd-section-filter-priority-list" type="b">
+            <default>false</default>
+            <summary>Show only services in priority list</summary>
+            <description>Show only services in priority list (if false show all services)</description>
+        </key>
+        <key name="systemd-section-items-priority-list" type="s">
+            <default>"apache2, apparmor, cron, crond, docker, firewalld, mariadb, memcached, mongodb, mysql, postgresql, redis-server"</default>
+            <summary>Systemd services priority list</summary>
+            <description>A comma-separated list of Systemd services which will be always shown on top</description>
+        </key>
+        <key name="cron-section-enabled" type="b">
+            <default>true</default>
+            <summary>Show Cron jobs</summary>
+            <description>Show Cron section in the menu.</description>
+        </key>
+        <key name="docker-section-enabled" type="b">
+            <default>true</default>
+            <summary>Show Docker containers</summary>
+            <description>Show Docker section in the menu.</description>
+        </key>
+        <key name="docker-section-show-images" type="b">
+            <default>false</default>
+            <summary>Show Docker images</summary>
+            <description>Show Docker images (if false show only containers).</description>
+        </key>
+        <key name="podman-section-enabled" type="b">
+            <default>false</default>
+            <summary>Show Podman containers</summary>
+            <description>Show Podman section in the menu.</description>
+        </key>
+        <key name="podman-section-show-images" type="b">
+            <default>false</default>
+            <summary>Show Podman images</summary>
+            <description>Show Podman images (if false show only containers).</description>
+        </key>
+    </schema>
+</schemalist>
