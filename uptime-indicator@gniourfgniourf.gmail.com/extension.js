@@ -133,7 +133,7 @@ const UptimeIndicator = GObject.registerClass(
                 /* Come back next minute */
                 this._set_refresh_rate(60 - (timestamps_s % 60));
             }
-            return `🟢${label_text}`;
+            return `🟢U ${label_text}`;
         }
 
         destroy()
