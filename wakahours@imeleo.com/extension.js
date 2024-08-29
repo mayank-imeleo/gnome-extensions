@@ -22,7 +22,7 @@ function disable() {
   Main.panel._rightBox.remove_child(panelButton);
 }
 
-function enable() {
+function _enable() {
   Main.panel._rightBox.insert_child_at_index(panelButton, 0);
   console.log("WakaTime extension enabled");
   updatePanelButtonText();
