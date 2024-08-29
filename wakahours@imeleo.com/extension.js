@@ -37,10 +37,11 @@ function getWakatimeValue() {
   }
   let commandOutput = commandOutputBytes.toString();
   // sample output: ['4 hrs 2 mins','51 mins']
-  let hours = commandOutput.match(/(\d+) hrs/);
+  let hours = commandOutput.match(/(\d+) hr/);
   hours = hours ? hours[1] : "0";
-  let minutes = commandOutput.match(/(\d+) mins/);
-  minutes = minutes ? minutes[1] : "00";
+  let minutes = commandOutput.match(/(\d+) min/);
+  minutes = minutes ? minutes[1] : "0";
+  minutes = parseInt(minutes) < "10" ? `0${minutes}` : minutes;
   return `${hours}:${minutes}`;
 }
 
