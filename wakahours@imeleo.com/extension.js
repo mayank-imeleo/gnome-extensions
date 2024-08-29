@@ -5,7 +5,7 @@ const GLib = imports.gi.GLib;
 const REFRESH_INTERVAL_SECONDS = 60 * 5;
 
 let panelButton = new St.Bin({
-  style: "padding-top: 7px",
+  style: "padding-top: 7px;padding-right: 3px;padding-left: 3px;",
 });
 
 let panelButtonText = new St.Label({
